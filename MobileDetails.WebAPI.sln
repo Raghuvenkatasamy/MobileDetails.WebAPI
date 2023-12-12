@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34031.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileDetails.WebAPI", "MobileDetails.WebAPI\MobileDetails.WebAPI.csproj", "{28F231E1-877E-49B9-9BBD-D5443DE6F06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperDataAccessLayer", "DapperDataAccessLayer\DapperDataAccessLayer.csproj", "{CF1FFD3B-331D-4813-A120-F02AA7F42B7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperDataAccessLayer", "DapperDataAccessLayer\DapperDataAccessLayer.csproj", "{CF1FFD3B-331D-4813-A120-F02AA7F42B7B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileDetails.API", "MobileDetails\MobileDetails.API.csproj", "{87BB73CB-DF9D-48DB-8DEC-40F8BCFF938F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileDetails.API", "MobileDetails\MobileDetails.API.csproj", "{87BB73CB-DF9D-48DB-8DEC-40F8BCFF938F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{28F231E1-877E-49B9-9BBD-D5443DE6F06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28F231E1-877E-49B9-9BBD-D5443DE6F06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28F231E1-877E-49B9-9BBD-D5443DE6F06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28F231E1-877E-49B9-9BBD-D5443DE6F06D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF1FFD3B-331D-4813-A120-F02AA7F42B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF1FFD3B-331D-4813-A120-F02AA7F42B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF1FFD3B-331D-4813-A120-F02AA7F42B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU

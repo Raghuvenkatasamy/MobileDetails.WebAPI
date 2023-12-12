@@ -11,12 +11,11 @@ namespace DapperDataAccessLayer
 {
     public class MobileDetailsRepository:IMobileDetailsRepository
     {
+       public string connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=batch7;user id=sa;password=Anaiyaan@123;";
         public MobileDetail InsertSP(MobileDetail MD)
         {
             try
             {
-                var connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=batch7;user id=sa;password=Anaiyaan@123;";
-
                 var con = new SqlConnection(connectionString);
                 con.Open();
                 con.Execute($"exec InsertMobileDetail '{MD.Name}','{MD.ManufactureName}','{MD.DateofMaufacture.ToString("d")}',{MD.YearofMaufacture},{MD.Quantity}");
@@ -39,12 +38,9 @@ namespace DapperDataAccessLayer
         {
             try
             {
-                var connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=batch7;user id=sa;password=Anaiyaan@123;";
-
                 var con = new SqlConnection(connectionString);
                 con.Open();
                 var products = con.Query<MobileDetail>($"exec ReadMobileDetail");
-
                 con.Close();
 
                 return products.ToList();
@@ -65,8 +61,6 @@ namespace DapperDataAccessLayer
         {
             try
             {
-                var connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=batch7;user id=sa;password=Anaiyaan@123;";
-
                 var con = new SqlConnection(connectionString);
                 con.Open();
                 var Details = con.QueryFirstOrDefault<MobileDetail>($"exec ReadbynumMobileDetail {id}");
@@ -95,8 +89,6 @@ namespace DapperDataAccessLayer
         {
             try
             {
-                var connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=batch7;user id=sa;password=Anaiyaan@123;";
-
                 var con = new SqlConnection(connectionString);
                 con.Open();
                 var Details = con.QueryFirstOrDefault<MobileDetail>($"exec DeleteMobileDetail {id}");
@@ -118,7 +110,6 @@ namespace DapperDataAccessLayer
         {
             try
             {
-                var connectionString = "Data source=DESKTOP-23V7KHU;initial catalog=Batch7;user id=sa;password=Anaiyaan@123;";
                 var sql = new SqlConnection(connectionString);
                 sql.Open();
                 var product = sql.QueryFirstOrDefault<MobileDetail>($"exec UpdateMobileDetail {id},'{MDS.Name}','{MDS.ManufactureName}','{MDS.DateofMaufacture.ToString("d")}',{MDS.YearofMaufacture},{MDS.Quantity}");
