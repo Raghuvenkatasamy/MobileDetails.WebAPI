@@ -18,7 +18,7 @@ namespace DapperDataAccessLayer
             {
                 var con = new SqlConnection(connectionString);
                 con.Open();
-                con.Execute($"exec InsertMobileDetail '{MD.Name}','{MD.ManufactureName}','{MD.DateofMaufacture.ToString("d")}',{MD.YearofMaufacture},{MD.Quantity}");
+                con.Execute($"exec InsertMobileDetail '{MD.Name}','{MD.ManufactureName}','{MD.DateofMaufacture.ToString("M/d/y")}',{MD.YearofMaufacture},{MD.Quantity}");
 
                 con.Close();
 
@@ -112,7 +112,7 @@ namespace DapperDataAccessLayer
             {
                 var sql = new SqlConnection(connectionString);
                 sql.Open();
-                var product = sql.QueryFirstOrDefault<MobileDetail>($"exec UpdateMobileDetail {id},'{MDS.Name}','{MDS.ManufactureName}','{MDS.DateofMaufacture.ToString("d")}',{MDS.YearofMaufacture},{MDS.Quantity}");
+                var product = sql.QueryFirstOrDefault<MobileDetail>($"exec UpdateMobileDetail {id},'{MDS.Name}','{MDS.ManufactureName}','{MDS.DateofMaufacture.ToString("M/d/y")}',{MDS.YearofMaufacture},{MDS.Quantity}");
                 sql.Close();
                 return product;
             }
